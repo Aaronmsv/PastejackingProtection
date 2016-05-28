@@ -11,14 +11,14 @@ Add the following bash script to your `~/.bashrc`:
 function pp {
 	# remember output, prevent different clipboard contents
 	# after choosing to execute
-	script=`xclip -o`
+	script=$(xclip -o)
 	cat -A <<< $script
 	echo -ne "\nExecute? (y/n): "
 	read execute
 	# only execute when 'y' was answered
 	# all other input is ignored
 	if [[ $execute == "y" ]]; then
-		eval $script
+		eval "$script"
 	fi
 }
 ```
