@@ -1,5 +1,5 @@
 # PastejackingProtection
-A bash script/function against pastejacking. If you don't know what pastejacking is, check these links:
+A bash script/function against pastejacking (also called **clipboard hijacking**). If you don't know what pastejacking is, check these links:
 
 * https://github.com/dxa4481/Pastejacking
 * http://www.ush.it/team/ascii/hack-tricks_253C_CCC2008/wysinwyc/what_you_see_is_not_what_you_copy.txt
@@ -21,10 +21,11 @@ function pp {
 		eval $script
 	fi
 }
-
 ```
 
 It shows the clipboard to you and gives you the option to execute the contents if you press `y`. Other input is ignored. It also prints special characters.
+
+I used to paste everything in gedit first, check it and then paste it in the terminal, but this is faster and gives better output by showing special characters. It's also handy to prevent pasting commands ending with a newline from executing directly, even if it's not malicious.
 
 # Example usage
 
