@@ -9,15 +9,19 @@ Add the following bash script to your `~/.bashrc`:
 
 ```bash
 function pp {
-    xclip -o | cat -A
-    echo -ne "\nExecute? (y/n): "
-    read execute
-    # only execute when 'y' was answered
-    # all other input is ignored
-    if [[ $execute == "y" ]]; then
-        eval `xclip -o`
-    fi
+	# remember output, prevent different clipboard contents
+	# after choosing to execute
+	script=`xclip -o`
+	cat -A <<< $script
+	echo -ne "\nExecute? (y/n): "
+	read execute
+	# only execute when 'y' was answered
+	# all other input is ignored
+	if [[ $execute == "y" ]]; then
+		eval $script
+	fi
 }
+
 ```
 
 It shows the clipboard to you and gives you the option to execute the contents if you press `y`. Other input is ignored. It also prints special characters.
