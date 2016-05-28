@@ -19,6 +19,8 @@ function pp {
 }
 ```
 
+It shows the clipboard to you and gives you the option to execute the contents if you press `y`. Other input is ignored. It also prints special characters.
+
 # Example usage
 
 Using the demo from the first link, we get:
