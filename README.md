@@ -17,7 +17,7 @@ function pp {
 	read execute
 	# only execute when 'y' was answered
 	# all other input is ignored
-	if [[ $execute == "y" ]]; then
+	if [[ "$execute" == "y" ]]; then
 		eval "$script"
 	fi
 }
