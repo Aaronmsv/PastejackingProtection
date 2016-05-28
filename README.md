@@ -13,7 +13,7 @@ function pp {
 	# after choosing to execute
 	script=$(xclip -o)
 	cat -A <<< $script
-	echo -ne "\nExecute? (y/n): "
+	printf "\nExecute? (y/n): "
 	read execute
 	# only execute when 'y' was answered
 	# all other input is ignored
