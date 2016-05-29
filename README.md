@@ -9,6 +9,12 @@ It shows the clipboard to you and gives you the option to execute the contents i
 
 I used to paste everything in gedit first, check it and then paste it in the terminal, but this is faster and gives better output by showing special characters. It's also handy to prevent pasting commands ending with a newline from executing directly, even if it's not malicious.
 
+###Alternatives###
+
+* Using **Bash** there's the `edit-and-execute-command (C-xC-e)` option. This will open your editor where you can paste/edit the commands and Bash will execute it after closing the editor. Note that editors can be exploited the same way if you're not careful. For example pasting vim and emacs macros. See https://github.com/dxa4481/Pastejacking#how-do-you-protect-yourself
+* **Zsh** with oh-my-zsh stuff has a safe paste mode. It still has exploits though, see https://thejh.net/misc/website-terminal-copy-paste the second demo.
+* **iTerm** will warn you when pasting newlines and can remove the newline for you. Like zsh it can probably still be exploited.
+
 # Installation
 
 There are two ways you can install this (assuming you use **Bash**):
