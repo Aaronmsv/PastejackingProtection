@@ -12,8 +12,8 @@ I used to paste everything in gedit first, check it and then paste it in the ter
 ###Alternatives###
 
 * Using **Bash** there's the `edit-and-execute-command (C-xC-e)` option. This will open your editor where you can paste/edit the commands and Bash will execute it after closing the editor. Note that editors can be exploited the same way if you're not careful. For example pasting vim and emacs macros. See https://github.com/dxa4481/Pastejacking#how-do-you-protect-yourself
-* **Zsh** with oh-my-zsh has a safe paste mode. It's also builtin since zsh 5.1+. It still has exploits though, see https://thejh.net/misc/website-terminal-copy-paste the second demo.
-* **iTerm** will warn you when pasting newlines and can remove the newline for you. Like zsh it can probably still be exploited.
+* **Zsh** with oh-my-zsh has a safe paste mode. It's also builtin since zsh 5.1+.
+* **iTerm** will warn you when pasting newlines and can remove the newline for you.
 
 NoScript is not sufficient because these attacks can be created with Javascript, but also HTML/CSS.
 
