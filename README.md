@@ -9,13 +9,13 @@ It shows the clipboard to you and gives you the option to execute the contents i
 
 I used to paste everything in gedit first, check it and then paste it in the terminal, but this is faster and gives better output by showing special characters. It's also handy to prevent pasting commands ending with a newline from executing directly, even if it's not malicious.
 
-###Alternatives###
+# Update: Bash 4.4+
 
-* Using **Bash** there's the `edit-and-execute-command (C-xC-e)` option. This will open your editor where you can paste/edit the commands and Bash will execute it after closing the editor. Note that editors can be exploited the same way if you're not careful. For example pasting vim and emacs macros. See https://github.com/dxa4481/Pastejacking#how-do-you-protect-yourself
-* **Zsh** with oh-my-zsh has a safe paste mode. It's also builtin since zsh 5.1+.
-* **iTerm** will warn you when pasting newlines and can remove the newline for you.
+Since Readline 7.0, Bash has builtin support for this (http://bug-readline.gnu.narkive.com/uiUPWQg7/readline-7-0-beta-available-for-ftp). So, when using Bash 4.4+, you can use `enable-bracketed-paste` instead. Pasted commands will no longer be able to execute immediately.
 
-NoScript is not sufficient because these attacks can be created with Javascript, but also HTML/CSS.
+To enable it, add `set enable-bracketed-paste on` to `~/.inputrc`.
+
+(Thanks to rahiel for mentioning it)
 
 # Installation
 
@@ -69,4 +69,12 @@ The second link has a much bigger script that you can test it on, but it's too b
 
 * `xclip` needs to be installed
 
-Tested on Ubuntu 15.04 and 16.04
+Tested on Ubuntu 15.04-16.04 and Arch.
+
+# Alternatives
+
+* Using **Bash** there's the `edit-and-execute-command (C-xC-e)` option. This will open your editor where you can paste/edit the commands and Bash will execute it after closing the editor. Note that editors can be exploited the same way if you're not careful. For example pasting vim and emacs macros. See https://github.com/dxa4481/Pastejacking#how-do-you-protect-yourself
+* **Zsh** with oh-my-zsh has a safe paste mode. It's also builtin since zsh 5.1+.
+* **iTerm** will warn you when pasting newlines and can remove the newline for you.
+
+NoScript is not sufficient because these attacks can be created with Javascript, but also HTML/CSS.
